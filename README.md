@@ -6,7 +6,6 @@ This landing page features a chakra-themed design with a modern UI, interactive 
 
 
 ---
-
 ## 🧰 Tech Stack
 
 - HTML5
