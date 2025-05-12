@@ -35,5 +35,5 @@ This landing page features a chakra-themed design with a modern UI, interactive 
 
 Made with 💙 by praveen kumar nayak
 📍 Based in India
-🔗 [LinkedIn](www.linkedin.com/in/praveen-kumar-nayak)
+🔗 [LinkedIn](linkedin.com/in/praveen-kumar-nayak)
 
