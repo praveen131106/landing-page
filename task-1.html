@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShinobiX | Web Power Unleashed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0d0d0d;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: transparent;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      transition: all 0.4s ease;
+    }
+
+    header.scrolled {
+      background-color: #121212;
+      box-shadow: 0 2px 10px rgba(255, 123, 0, 0.3);
+    }
+
+    .logo {
+      color: #ff7b00;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ff7b00;
+      font-size: 1rem;
+      padding: 6px 12px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #ff7b00;
+      color: #0d0d0d;
+      border-radius: 5px;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 13, 13, 0.9)), url('https://wallpapercave.com/wp/wp5093846.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #ff7b00;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 80px 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #ff7b00;
+      margin-bottom: 20px;
+    }
+
+    p, li {
+      color: #ddd;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      background: #121212;
+      padding: 30px;
+      color: #888;
+    }
+
+    @media(max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #121212;
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        width: 180px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+        cursor: pointer;
+      }
+
+      .menu-icon div {
+        width: 25px;
+        height: 3px;
+        background: #ff7b00;
+        margin: 4px 0;
+      }
+    }
+
+    .menu-icon {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="navbar">
+    <div class="logo">ShinobiX</div>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">The Clan</a></li>
+        <li><a href="#services">Our Skills</a></li>
+        <li><a href="#contact">Summon Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h1>ShinobiX – Power Your Web With Chakra</h1>
+      <p>Inspired by Naruto, built in India. We fuse stealth, design, and speed to create ninja-grade websites and apps.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Meet the Clan</h2>
+    <p>We're not your average dev team. We come from the tech village of Bengaluru, trained in full-stack Ninjutsu. Our goal? Craft websites that are fast, beautiful, and unforgettable — like a perfect Sharingan counter-attack.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Ninja Skills</h2>
+    <ul>
+      <li>🌀 Chakra UI Designs – Fast, accessible, and clean</li>
+      <li>⚔️ Frontend Jutsu – React, Vue, or Vanilla JS</li>
+      <li>🧭 Backend Mastery – Node.js, Express, Firebase</li>
+      <li>💰 Indian Payments – UPI, Razorpay, Paytm integrations</li>
+      <li>📱 Fully Responsive Layouts – All devices, no exceptions</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Summon the Team</h2>
+    <p>Got a mission for us? Let’s connect!</p>
+    <p>📧 Email: <a href="mailto:sensei@shinobix.in" style="color:#ff7b00;">sensei@shinobix.in</a></p>
+    <p>📞 Phone: +91 98989 00001</p>
+    <p>📍 Hidden Sand Lane, Bengaluru, India</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ShinobiX. Made in India. Inspired by Naruto. Built with chakra.</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.getElementById('nav-links');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    function toggleMenu() {
+      navLinks.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
