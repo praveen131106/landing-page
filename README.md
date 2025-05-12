@@ -4,11 +4,6 @@ Welcome to **ShinobiX**, a fully responsive, single-page website inspired by the
 
 This landing page features a chakra-themed design with a modern UI, interactive navigation, and a full Naruto background to give it a unique anime-inspired personality.
 
----
-
-## 🔥 Live Demo
-
-🌐 [View Live Site](file:///C:/Users/pprav/naruto.html)
 
 ---
 
@@ -35,5 +30,4 @@ This landing page features a chakra-themed design with a modern UI, interactive 
 
 Made with 💙 by praveen kumar nayak
 📍 Based in India
-🔗 [LinkedIn](linkedin.com/in/praveen-kumar-nayak)
 
