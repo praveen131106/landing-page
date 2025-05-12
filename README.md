@@ -8,7 +8,7 @@ This landing page features a chakra-themed design with a modern UI, interactive 
 
 ## 🔥 Live Demo
 
-🌐 [View Live Site](https://praveen131106.github.io/landing-page/)
+🌐 [View Live Site](file:///C:/Users/pprav/naruto.html)
 
 ---
 
